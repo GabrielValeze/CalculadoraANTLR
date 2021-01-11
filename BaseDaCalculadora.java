@@ -1,6 +1,6 @@
-import java.util.HashMap;
+import java.util.HashMap; // Uma tabela de dispersão é uma estrutura de dados especial, que associa chaves de pesquisa a valores.
 
-public class CalculatorBaseVisitorImpl extends CalculatorBaseVisitor<Double> {
+public class CalculatorBaseVisitorImpl extends CalculatorBaseVisitor<Double> { //
     private HashMap<String, Double> variables = new HashMap<String, Double>();
 
     @Override
