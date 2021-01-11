@@ -8,9 +8,9 @@ NL     : '\n';
 WS     : [ \t\r]+ -> skip;
 ID     : [a-zA-Z_][a-zA-Z_0-9]*;
 
-PLUS  : '+';
-EQUAL : '=';
-MINUS : '-';
+MAIS  : '+';
+IGUAL : '=';
+MENOS : '-';
 MULT  : '*';
 DIV   : '/';
 LPAR  : '(';
