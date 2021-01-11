@@ -1,11 +1,11 @@
-grammar Calculator;
+gramática Calculadora;
 INT    : [0-9]+;
 DOUBLE : [0-9]+'.'[0-9]+;
 PI     : 'pi';
 E      : 'e';
 POW    : '^';
 NL     : '\n';
-WS     : [ \t\r]+ -> skip;
+WS     : [ \t\r]+ -> pular;
 ID     : [a-zA-Z_][a-zA-Z_0-9]*;
 
 MAIS  : '+';
@@ -18,17 +18,17 @@ RPAR  : ')';
 
 input
     : setVar NL input     # ToSetVar
-    | plusOrMinus NL? EOF # Calculate
+    | maisOuMenos NL? EOF # Calcule
     ;
 
 setVar
-    : ID EQUAL plusOrMinus # SetVariable
+    : ID IGUAL maisOuMenos # SetVariable
     ;
 
 
 plusOrMinus 
-    : plusOrMinus PLUS multOrDiv  # Plus
-    | plusOrMinus MINUS multOrDiv # Minus
+    : maisOuMenos PLUS multOrDiv  # Plus
+    | maisOuMenos MINUS multOrDiv # Minus
     | multOrDiv                   # ToMultOrDiv
     ;
 
